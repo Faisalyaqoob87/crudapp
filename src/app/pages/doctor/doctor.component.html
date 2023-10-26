@@ -1,0 +1,73 @@
+
+
+  <!-- <mat-form-field color="accent">
+    <mat-label>Toppings</mat-label>
+    <mat-select [formControl]="val" multiple>
+      <mat-option (onChange)="handleClick(val)" *ngFor="let topping of doctors" [value]="topping">{{topping}}</mat-option>
+    </mat-select>
+  </mat-form-field> -->
+  <div >
+  <mat-form-field color="accent">
+    <mat-label>Select an option</mat-label>
+    <mat-select [(ngModel)]="selectedDoctor" (selectionChange)="handleClick(selectedDoctor)">
+      <mat-option [value]="null">None</mat-option>
+      <mat-option *ngFor="let doctor of doctors" [value]="doctor">{{ doctor }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  
+  <div class="mat-elevation-z8" >
+    <table mat-table [dataSource]="dataSource" matSort  class="table">
+  
+      <!-- ID Column -->
+      <ng-container matColumnDef="id"  >
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+        <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+      </ng-container>
+  
+      <!-- FirstName Column -->
+      <ng-container matColumnDef="FirstName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> FirstName </th>
+        <td mat-cell *matCellDef="let row"> {{row.FirstName}}</td>
+      </ng-container>
+  
+      <!-- LastName Column -->
+      <ng-container matColumnDef="LastName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> LastName </th>
+        <td mat-cell *matCellDef="let row"> {{row.LastName}} </td>
+      </ng-container>
+  
+      <!-- dob Column -->
+      <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Date </th>
+        <td mat-cell *matCellDef="let row"> {{row.date | date}} </td>
+      </ng-container>
+
+        <!-- Gender Column -->
+        <ng-container matColumnDef="Gender">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Gender</th>
+            <td mat-cell *matCellDef="let row"> {{row.Gender}} </td>
+          </ng-container>
+
+            <!-- Discription Column -->
+      
+
+        <!-- Email Column -->
+        <ng-container matColumnDef="phone">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Phone </th>
+            <td mat-cell *matCellDef="let row"> {{row.phone}} </td>
+          </ng-container>
+
+            <!-- Payment Column -->
+      <ng-container matColumnDef="Payment">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Doctor Fee </th>
+        <td mat-cell *matCellDef="let row"> {{row.Payment}} </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+  
+    <mat-paginator  [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator >
+  </div>
+</div>

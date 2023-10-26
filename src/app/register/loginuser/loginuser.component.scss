@@ -1,0 +1,38 @@
+.card{
+    margin-top: 30px;
+     border: none;
+     width: 500px;
+     padding: 40px;
+     position: fixed;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50% );
+     background: hsla(250, 46%, 30%, 1);
+     background: linear-gradient(90deg,  hsla(250, 46%, 30%, 1) 0%,  hsla(260, 29%, 36%, 1)100%);
+ }
+  .card ,h1,h6 {
+ color: aliceblue;
+  }
+  label{
+     color: aliceblue;
+  }
+  .form-text{
+     color:white;
+  }
+  :host ::ng-deep .p-dialog .p-dialog-content {
+   background: #06c8d6;
+   color: #495057;
+   padding: 0 1.5rem 2rem 1.5rem;
+   overflow: auto;
+   height: 30vh;
+ }
+ :host ::ng-deep .p-element.ng-trigger.ng-trigger-animation.p-dialog.p-component.p-dialog-draggable.p-dialog-resizable {
+   width: 30%;
+ }
+ :host ::ng-deep.p-dialog-header {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-shrink: 0;
+   background-color: burlywood;
+}

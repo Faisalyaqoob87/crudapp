@@ -1,0 +1,65 @@
+
+<div *ngIf="!visibleBool"  class="container">
+    <div class="row">
+        <div class="col-md -6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Login</h1>
+                    <h6>Please Login Yourself</h6>
+                </div>
+                <form>
+                    <form [formGroup]="loginuserForm" (ngSubmit)="login(loginuserForm.value)">
+                        
+
+                        <div class="mb-3">
+                            <span style="color: red;" *ngIf="email && email.invalid && email.touched">Input field invalid</span>
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" formControlName="email">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>  
+                        </div>
+                        <div class="mb-3">
+                            <span style="color: red;" *ngIf="password && password.invalid && password.touched">Input field invalid</span>
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                formControlName="password">
+                        </div>
+                        <button type="submit" [disabled]="loginuserForm.invalid" class="btn btn-primary">Login</button>
+                        <!-- <button [disabled]="loginuserForm.invalid" class="btn btn-primary" routerLink="/Layout">Login</button> -->
+                    </form>
+                    <span>Don't have an account?</span>
+                    <a routerLink="/signin">register</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+        
+<!--     <div  class="card flex justify-content-center">
+        <p-dialog *ngIf="visibleBool" Role="Role" [(visible)]="visibleBool" [modal]="true" [draggable]="false" [resizable]="false">
+            <div class="mb-3">Select your Role 
+                <select name="Role" formControlName="Role">
+                 <option value="Admin">Admin</option>
+                 <option value="Doctor">Doctor</option>
+                 <option value="Patient">Patient</option>
+
+                </select>
+             </div>
+        </p-dialog>
+    </div> -->
+
+
+    <div  class=" flex justify-content-center">
+    <p-dialog *ngIf="visibleBool" header="Please Select Role" [draggable]="false" [modal]="true" [(visible)]="visibleBool"
+  [baseZIndex]="500000">
+        <div class="mt-5">Select your Role 
+            <select name="Role" formControlName="Role">
+             <option value="Admin">Admin</option>
+             <option value="Doctor">Doctor</option>
+                <option value="Patient">Patient</option>
+
+                </select>
+            </div>
+    </p-dialog>
+</div>

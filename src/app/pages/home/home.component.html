@@ -1,0 +1,142 @@
+<!-- Select Doctor Dropdown -->
+<div class="backgroung">
+<button color="accent" mat-button [matMenuTriggerFor]="animals"> Select Doctors</button>
+<mat-menu #animals="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="vertebrates">Doctor List</button>
+</mat-menu>
+
+<!--  Department List  -->
+<mat-menu #vertebrates="matMenu" color="accent">
+  <button mat-menu-item [matMenuTriggerFor]="neurology">Neurology</button>
+  <button mat-menu-item [matMenuTriggerFor]="cardiology">Cardiology</button>
+  <button mat-menu-item [matMenuTriggerFor]="radiology">Radiology</button>
+  <button mat-menu-item [matMenuTriggerFor]="surgeon">Surgeon</button>
+  <button mat-menu-item [matMenuTriggerFor]="psychatrist">Psychatrist</button>
+</mat-menu>
+
+<!--  Doctor Name List -->
+<mat-menu #neurology="matMenu" color="accent">
+  <button mat-menu-item>DR.Amir</button>
+  <button mat-menu-item> Dr.Hassan</button>
+  <button mat-menu-item>Dr.Ali </button>
+  <button mat-menu-item>Dr.Asghar</button>
+  <button mat-menu-item>Dr.Hammad</button>
+</mat-menu>
+<mat-menu #cardiology="matMenu" color="accent">
+  <button mat-menu-item>Dr.Faisal</button>
+  <button mat-menu-item>Dr.Sufyan</button>
+  <button mat-menu-item>Dr.Abubakar </button>
+  <button mat-menu-item> Dr.Furqan</button>
+</mat-menu>
+<mat-menu #radiology="matMenu" color="accent">
+  <button mat-menu-item> Dr.Tulaib </button>
+  <button mat-menu-item> Dr.Ahmed </button>
+  <button mat-menu-item> Dr.Iqbal </button>
+  <button mat-menu-item> Dr.Shakeel </button>
+</mat-menu>
+<mat-menu #surgeon="matMenu" color="accent">
+  <button mat-menu-item> Dr.Asim </button>
+  <button mat-menu-item>Dr.Umer </button>
+  <button mat-menu-item>Dr.Asif </button>
+</mat-menu>
+<mat-menu #psychatrist="matMenu" color="accent">
+  <button mat-menu-item> Dr.Fahad </button>
+  <button mat-menu-item> Dr.Asad </button>
+  <button mat-menu-item> Dr.Azhar </button>
+</mat-menu>
+
+<!--  Doctor Descripstion -->
+<mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-tile>
+    <div class="container">
+      <mat-card>
+        <mat-card-header>
+          <img src="/assets/dr1.jpg" alt="company logo">
+          <mat-card-title>Dr. Muhammad Nouman Anjum</mat-card-title>
+          <mat-card-subtitle>Designation <br>
+            <p>
+              General Practitioner, Internal Medicine Specialist, Diabetologist, Family Medicine
+              MBBS, FCPS (Internal Medicine), Certified Diabetologist (UK), Certified
+              Hypertension Specialist (PSIM)
+            </p>
+          </mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+    </div>
+  </mat-grid-tile>
+
+  <!--  Doctor Descripstion -->
+  <mat-grid-tile>
+    <div class="container">
+      <mat-card>
+        <mat-card-header>
+          <img src="/assets/dr2.jpg" alt="company logo">
+          <mat-card-title>Assoc. Prof. Dr. Suresh Kumar</mat-card-title>
+          <mat-card-subtitle>Designation <br>
+            <p>
+              Endocrinologist, General Physician, Internal Medicine Specialist
+              MBBS, MCPS, FCPS (Medicine), FCPS (Endocrinology)
+            </p>
+          </mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+    </div>
+  </mat-grid-tile>
+
+  <!--  Doctor Descripstion -->
+  <mat-grid-tile>
+    <div class="container">
+      <mat-card>
+        <mat-card-header>
+          <img src="/assets/dr3.jpg" alt="company logo">
+          <mat-card-title>Dr. Asim Allah Bakhsh</mat-card-title>
+          <mat-card-subtitle>Designation <br>
+            <p>
+              Family Medicine, General Physician, Internal Medicine Specialist
+              MBBS , MCPS (Family Medicine)
+            </p>
+          </mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+    </div>
+  </mat-grid-tile>
+
+  <!--  Doctor Descripstion -->
+  <mat-grid-tile>
+    <div class="container">
+      <mat-card>
+        <mat-card-header>
+          <img src="/assets/dr4.jpg" alt="company logo">
+          <mat-card-title>Dr. Hassan Gul</mat-card-title>
+          <mat-card-subtitle>Designation <br>
+            <p>
+              General Physician, Pulmonologist / Lung Specialist
+              MBBS, MCPS (Trainee)
+            </p>
+          </mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<!-- Bar charts -->
+<mat-grid-list cols="2" rowHeight="1:1">
+  <mat-grid-tile>
+    <div class="col-lg-6">
+      <h2>Bar Chart</h2>
+      <canvas id="barchart">
+      </canvas>
+    </div>
+  </mat-grid-tile>
+
+  <!-- Pie charts -->
+  <mat-grid-tile>
+    <div class="col-lg-6">
+      <h2>Pie Chart</h2>
+      <canvas id="piechart">
+      </canvas>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
+</div>

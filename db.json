@@ -1,0 +1,43 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "FullName": "faisal",
+      "email": "faisal@gmail.com",
+      "password": "741258",
+      "phoneno": 789654123
+    },
+    {
+      "UserName": "faisal",
+      "email": "faisalyaqoob8787@gmail.com",
+      "password": "12312",
+      "phoneno": 524524,
+      "Role": "Patient",
+      "id": 2
+    },
+    {
+      "UserName": "doctor",
+      "email": "d@gmail.com",
+      "password": "12345",
+      "phoneno": 30212155,
+      "Role": "Doctor",
+      "id": 3
+    },
+    {
+      "UserName": "patient",
+      "email": "p@gmail.com",
+      "password": "12345",
+      "phoneno": 302456,
+      "Role": "Patient",
+      "id": 4
+    },
+    {
+      "UserName": "bilal",
+      "email": "dd@gmail.com",
+      "password": "12345",
+      "phoneno": 152151435,
+      "Role": "Doctor",
+      "id": 5
+    }
+  ]
+}
